@@ -40,4 +40,6 @@ def send_message():
 
     return jsonify({'response': response.text})
 
-# Tidak perlu `if __name__ == '__main__'` untuk menjalankan di Vercel
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))  # Railway menyediakan port dinamis melalui environment variable PORT
+    app.run(host="0.0.0.0", port=port)
