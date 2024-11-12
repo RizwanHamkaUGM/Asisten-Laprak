@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 CORS(app)  # Mengizinkan CORS
 
-genai.configure(api_key=os.getenv("AIzaSyDysEhFfxFcrV0cfWKfQnjiqq74CHdyzvM"))
+genai.configure(api_key=os.getenv("AIzaSyDysEhFfxFcrV0cfWKfQnjiqq74CHdyzvM")
 
 generation_config = {
   "temperature": 1,
